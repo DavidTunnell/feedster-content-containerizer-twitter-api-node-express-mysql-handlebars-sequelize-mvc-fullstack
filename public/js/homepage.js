@@ -47,6 +47,18 @@ tweetTexts.forEach((el) => {
     }
 });
 
+//tw-block-parent
+const feedContainers = document.querySelectorAll(".card-content");
+feedContainers.forEach((el) => {
+    var lastTweet = Array.from(el.querySelectorAll(".tw-block-parent")).pop();
+    lastTweet.classList.add("round-bottoms");
+});
+// console.log(feedContainers[0].firstChild);
+// tweetContainers.forEach((el) => {
+//     const tweetContainers = document.querySelectorAll(
+//         ".timeline-TweetList-tweet"
+//     );
+// });
 // //feed-cards
 // const feedCards = document.querySelectorAll(".feed-cards");
 // feedCards.forEach((el) => {

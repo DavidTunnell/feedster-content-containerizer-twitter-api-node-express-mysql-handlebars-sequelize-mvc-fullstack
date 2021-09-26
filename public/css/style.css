@@ -64,6 +64,10 @@ a:hover {
     background: none;
 }
 
+.round-bottoms {
+    border-radius: 0px 0px 6px 6px;
+}
+
 .input-icon {
     margin-left: 0.8em;
     margin-top: 0.8em;
