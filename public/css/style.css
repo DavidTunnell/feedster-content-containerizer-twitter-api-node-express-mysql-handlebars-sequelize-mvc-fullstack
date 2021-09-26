@@ -19,10 +19,6 @@ a:hover {
     color: #e1dfdb;
 }
 
-input:-internal-autofill-selected {
-    background-color: blue !important;
-}
-
 .panel-background {
     background-color: #2d3032;
 }
@@ -31,6 +27,16 @@ input:-internal-autofill-selected {
 }
 .label {
     color: #e1dfdb;
+}
+.card-header-title {
+    color: #181a1b;
+}
+
+.plus-icon {
+    font-size: 3em;
+    margin-top: -0.27em;
+    margin-left: -1em;
+    color: #181a1b;
 }
 
 .input:autofill {
@@ -49,10 +55,25 @@ input:-internal-autofill-selected {
     background-color: #1b1d1e;
 }
 
+.card-header {
+    background-color: #e1dfdb;
+}
+.card-header-icon {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
 .input-icon {
     margin-left: 0.8em;
     margin-top: 0.8em;
     color: #2d3032;
+}
+.card-header {
+    border-radius: 6px 6px 0px 0px;
+}
+.card {
+    border-radius: 6px;
 }
 
 nav.navbar {
@@ -78,6 +99,45 @@ a.navbar-item:focus-within,
 a.navbar-item:hover {
     background-color: #2b2e2f;
     color: #edecea;
+}
+
+.masonry-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.grid-container {
+    columns: 3 300px;
+    column-gap: 1.5rem;
+    width: 99%;
+    margin: 1em;
+}
+
+.feed-container {
+    margin: 1em;
+}
+
+.grid-container div {
+    display: inline-block;
+    padding: 1px;
+}
+.create-button-container {
+    width: 100%;
+    height: 10em;
+}
+
+.create-button-card {
+    width: 40%;
+    height: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 4em;
+    padding-bottom: 1.7em;
 }
 
 @media only screen and (max-width: 1025px) {

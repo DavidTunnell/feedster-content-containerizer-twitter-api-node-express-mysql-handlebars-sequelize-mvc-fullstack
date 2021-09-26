@@ -1,48 +1,33 @@
-<section class="masonry-container">
+<section class="masonry-container panel-background">
     <div class="grid-container">
-        {{#each UserAndFeedData}}
         <div class="feed-container">
-            <li class="list-group-item" style="background: #ccd6dd">
-                {{#if ../loggedIn}}
-                    <button
-                        style="float: right; width: 2rem"
-                        class="follow-feed-button"
-                        data-feed-id="{{this.id}}"
-                        data-logged-in-user-id="{{../loggedInUserData.id}}"
-                        data-user-created-id="{{this.user_id}}" title="Click to follow this feed source"
-                    >+</button>
-                {{/if}}
-                <h5 style="text-align: center; padding-left: 1rem; padding-right: 1rem"><a
-                        href="/feed/{{this.id}}"
-                >{{this.title}}</a> by <a href="/profile/{{this.user.id}}">{{this.user.username}}</a></h5>
-            </li>
-            {{#each this.tweetFeed}}
-                <div class="tw-block-parent tw-background">
-                    <div class="tw-block-parent tw-background" style="border: 1px solid #dddddd">
-                        <div class="timeline-TweetList-tweet">
-                            <div class="timeline-Tweet" style="margin">
-                                <div class="timeline-Tweet-brand">
-                                    <div class="Icon Icon--twitter"></div>
-                                </div>
-                                <div class="timeline-Tweet-author">
-                                    <a class="TweetAuthor-link" href="https://twitter.com/{{this.user.screen_name}}" target="_blank">
-                                    <div class="TweetAuthor"><span class="TweetAuthor-avatar"> 
-                                        <div class="Avatar"><img src="{{this.user.profile_image_url_https}}" alt="{{this.user.name}}" class="tw-profile-img"></div></span><span class="TweetAuthor-name">{{this.user.name}}</span><span class="Icon Icon--verified"></span><span class="TweetAuthor-screenName">{{at_sign_format_twitter this.user.screen_name}}</span></div>
-                                    </a>
-                                </div>
-                                <div class="timeline-Tweet-text">{{this.text}}</div>
-                                <div class="timeline-Tweet-metadata"><span class="timeline-Tweet-timestamp">{{format_time_twitter this.created_at}}</span></div>
-                                <ul class="timeline-Tweet-actions">
-                                    <li class="timeline-Tweet-action"><a class="Icon Icon--heart" href="#"></a></li>
-                                    <li class="timeline-Tweet-action"><a class="Icon Icon--share" href="#"></a></li>
-                                </ul>
-                            </div>
-                        </div>
+            <div class="card card-background">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        Component
+                    </p>
+                    <button class="card-header-icon" aria-label="more options">
+                        <span class="icon">
+                            <i
+                                class="fa fa-plus-circle plus-icon"
+                                aria-hidden="true"
+                            ></i>
+                        </span>
+                    </button>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Phasellus nec iaculis mauris.
+                        <a href="#">@bulmaio</a>.
+                        <a href="#">#css</a>
+                        <a href="#">#responsive</a>
+                        <br />
+                        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                     </div>
                 </div>
-            {{/each}}
+            </div>
         </div>
-        {{/each}}
     </div>
 </section>
 <script src="../js/homepage.js"></script>
