@@ -1,8 +1,8 @@
 //try to log user in from client to API
 const loginFormHandler = async (event) => {
     event.preventDefault();
-    const email = document.querySelector("#typeEmailX").value.trim();
-    const password = document.querySelector("#typePasswordX").value.trim();
+    const email = document.querySelector(".email-input").value.trim();
+    const password = document.querySelector(".password-input").value.trim();
     console.log(JSON.stringify({ email, password }));
     if (email && password) {
         const response = await fetch("/api/users/login", {
@@ -27,5 +27,5 @@ const loginFormHandler = async (event) => {
 };
 
 document
-    .querySelector(".login-submit")
+    .querySelector(".login-button")
     .addEventListener("click", loginFormHandler);

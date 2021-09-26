@@ -15,12 +15,44 @@ a:hover {
     color: #e1dfdb;
 }
 
+.message.is-info .message-body {
+    color: #e1dfdb;
+}
+
+input:-internal-autofill-selected {
+    background-color: blue !important;
+}
+
+.panel-background {
+    background-color: #2d3032;
+}
+.input {
+    background-color: #e1dfdb;
+}
+.label {
+    color: #e1dfdb;
+}
+
+.input:autofill {
+    background-color: #e1dfdb;
+}
+
+.card-background {
+    background-color: #181a1b;
+}
+
 .navbar {
     background-color: #181a1b;
 }
 
 .footer {
     background-color: #1b1d1e;
+}
+
+.input-icon {
+    margin-left: 0.8em;
+    margin-top: 0.8em;
+    color: #2d3032;
 }
 
 nav.navbar {

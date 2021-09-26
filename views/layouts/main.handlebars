@@ -14,9 +14,9 @@
             integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="../css/bulma-divider.css" />
         <link rel="stylesheet" href="../css/twitter-feed.css" />
         <link rel="stylesheet" href="../css/masonry-cards.css" />
+        <link rel="stylesheet" href="../css/bulma-divider.css" />
         <link rel="stylesheet" href="../css/style.css" />
         <script src="/js/main.js"></script>
     </head>
@@ -47,6 +47,12 @@
                             Home
                         </a>
                         {{#if loggedIn}}
+                            <a
+                                class="navbar-item is-size-5 has-text-weight-semibold"
+                                href="/profile/{{loggedInUserData.id}}"
+                            >
+                                Profile
+                            </a>
                             <a
                                 class="navbar-item is-size-5 has-text-weight-semibold"
                                 href="/logout/"
