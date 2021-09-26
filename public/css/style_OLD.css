@@ -1,0 +1,150 @@
+.gradient-custom {
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to top, #55aceeff, rgb(247, 246, 246));
+    /* fallback for old browsers */
+    background: #55aceeff;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to top, #55aceeff, rgb(247, 246, 246));
+}
+
+body {
+    background-image: linear-gradient(to top, #55aceeff, #fff);
+}
+
+/* input validation on the client side */
+
+.form-control:invalid {
+    /* visual indication of the field is highlighted in red if the input doesn't meet standards*/
+    border: 2px solid red;
+}
+
+.form-control:invalid:required {
+    /* background-color: rgb(212, 226, 233); */
+    background-color: #fff;
+}
+
+.form-control:valid {
+    /* visual indication of the field is highlighted in green if the input does meet standards*/
+    border: 2px solid green;
+}
+
+.main-card {
+    background-color: #e1e8ed;
+    border-radius: 5px;
+    border: 2px solid #888888;
+}
+
+.submit-signup {
+    background-color: #6d7981;
+    color: #e1e8ed;
+    border-radius: 5px;
+    border: 1px solid #7a7a7a;
+}
+
+.login-submit {
+    background-color: #6d7981;
+    color: #e1e8ed;
+    border-radius: 5px;
+    border: 1px solid #7a7a7a;
+}
+
+.form-control {
+    border: 1px solid #888888;
+}
+
+/* Updated the logic for links to be color coded https://www.w3schools.com/css/tryit.asp?filename=trycss_link */
+/* unvisited link */
+ a:link {
+    color: rgb(10, 152, 196);
+}
+
+/* visited link */
+a:visited {
+    color: rgb(54, 66, 54);
+}
+
+/* mouse over link */
+a:hover {
+    color: rgb(69, 10, 117);
+}
+
+/* footer h5 */
+
+h5 {
+    text-align: center;
+}
+
+.passCheck {
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    color: #6e6e6e;
+}
+
+/* Comment Section */
+
+#header-title {
+    background: #ccd6dd;
+    justify-content: center;
+    border: 2px solid #7a7a7a;
+    border-bottom: none;
+}
+
+#main-section {
+    width: 57.5rem;
+    padding: 0;
+    border: 1px #7a7a7a;
+}
+
+#section-cards {
+    border: 1px solid #7a7a7a;
+}
+
+#single-cards {
+    border: 1px solid #7a7a7a;
+}
+
+#comment-section {
+    width: 59rem;
+    margin-left: 4rem;
+}
+
+#main-comment-card {
+    border: 1px solid #7a7a7a;
+}
+
+#comment-body {
+    border: 1px solid #7a7a7a;
+}
+
+#comment-time {
+    float: right;
+    color: #7a7a7a;
+    font-size: 12px;
+}
+
+#commenter-name {
+    text-decoration: none;
+}
+
+.comment-input {
+    border: 1px solid #7a7a7a;
+    height: 2.5rem;
+    width: 100%;
+}
+
+#postBtn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 4px;
+    border: 1px solid #7a7a7a;
+    width: 10%;
+    height: 2.5rem;
+    background-color: #6d7981;
+    color: #e1e8ed;
+}
+
+.add-feed-button {
+    margin: 0.5em;
+}

@@ -11,6 +11,8 @@ const sequelize = require("./config/connection");
 const controllers = require("./controllers");
 const helpers = require("./utils/helpers");
 const { errorMonitor } = require("events");
+require("dotenv").config();
+
 // Incorporate the custom helper methods: ./utils/helpers.js
 const handlebars = expressHandlebars.create({
     helpers,
@@ -22,7 +24,7 @@ const PORT = process.env.PORT || 3001;
 
 // Set up sessions
 const sess = {
-    secret: "Secret key goes here !@#$%",
+    secret: process.env.SESSION_SECRET,
     cookie: {
         // Stored in milliseconds (86,400,000 === 1 day)
         //28800000 = 8 hours
