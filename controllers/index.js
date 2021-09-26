@@ -33,8 +33,4 @@ router.get("/logout", async (req, res) => {
     });
 });
 
-router.get("/tos", (req, res) =>
-    res.sendFile(path.join(__dirname, "../public/tos.html"))
-);
-
 module.exports = router;
