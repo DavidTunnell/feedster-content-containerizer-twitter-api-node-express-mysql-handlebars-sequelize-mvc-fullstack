@@ -5,12 +5,15 @@
                 <div class="card card-background">
                     <header class="card-header">
                         <p class="card-header-title">
-                            Component
+                            <a href="/feed/{{this.id}}" >{{this.title}}</a>&nbsp;by&nbsp;<a href="/profile/{{this.user.id}}">{{this.user.username}}</a>
                         </p>
                         {{#if ../loggedIn}}
                             <button
-                                class="card-header-icon"
+                                class="card-header-icon follow-feed-button"
                                 aria-label="more options"
+                                data-feed-id="{{this.id}}"
+                                data-logged-in-user-id="{{../loggedInUserData.id}}"
+                                data-user-created-id="{{this.user_id}}" title="Click to follow this feed source"
                             >
                                 <span class="icon">
                                     <i

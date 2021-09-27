@@ -38,11 +38,32 @@ a:hover {
     margin-left: -1em;
     color: #181a1b;
 }
+/* 1e2021 */
+.timeline-TweetList-tweet {
+    background-color: #1e2021;
+}
 
+.tw-background {
+    background-color: #181a1b;
+}
+.Avatar {
+    background: #181a1b;
+}
+.tw-profile-img {
+    border-radius: 3px;
+}
+.TweetAuthor-screenName {
+    color: #a3a299;
+}
 .input:autofill {
     background-color: #e1dfdb;
 }
-
+.timeline-Tweet-text {
+    color: #c8cfcc;
+}
+.timeline-Tweet-action {
+    margin-bottom: 0.5em;
+}
 .card-background {
     background-color: #181a1b;
 }
@@ -56,7 +77,7 @@ a:hover {
 }
 
 .card-header {
-    background-color: #e1dfdb;
+    background-color: #cccac5;
 }
 .card-header-icon {
     padding: 0;
@@ -149,38 +170,3 @@ a.navbar-item:hover {
         max-height: 3em;
     }
 }
-/* 
-
-.hug {
-    margin-top: -3em;
-}
-
-.table-id {
-    width: 10%;
-}
-
-.table-title {
-    width: auto;
-}
-
-.table-edit {
-    width: 6%;
-}
-
-.table-delete {
-    width: 6%;
-}
-
-.hero-body-neg {
-    margin-top: -3em;
-}
-
-.delete-comment {
-    text-decoration: underline;
-}
-
-.delete-comment:hover {
-    cursor: pointer;
-}
-
- */

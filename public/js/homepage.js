@@ -1,12 +1,13 @@
 const followFeedHandler = async (event) => {
     event.preventDefault();
 
-    const feed_id = event.target.getAttribute("data-feed-id");
-    const user_following_id = event.target.getAttribute(
+    const feed_id = event.currentTarget.getAttribute("data-feed-id");
+    const user_following_id = event.currentTarget.getAttribute(
         "data-logged-in-user-id"
     );
-    const user_created_id = event.target.getAttribute("data-user-created-id");
-
+    const user_created_id = event.currentTarget.getAttribute(
+        "data-user-created-id"
+    );
     if (feed_id && user_following_id && user_created_id) {
         const response = await fetch("/api/feedfollowers/", {
             method: "POST",
@@ -53,20 +54,3 @@ feedContainers.forEach((el) => {
     var lastTweet = Array.from(el.querySelectorAll(".tw-block-parent")).pop();
     lastTweet.classList.add("round-bottoms");
 });
-// console.log(feedContainers[0].firstChild);
-// tweetContainers.forEach((el) => {
-//     const tweetContainers = document.querySelectorAll(
-//         ".timeline-TweetList-tweet"
-//     );
-// });
-// //feed-cards
-// const feedCards = document.querySelectorAll(".feed-cards");
-// feedCards.forEach((el) => {
-//     const feedsTweets = el.querySelector(".tweet-list");
-//     const feedHeaderLength = el.querySelector(".list-group-item").offsetHeight;
-//     const feedContentLength = feedsTweets.offsetHeight;
-//     const gridHeight = ~~((feedHeaderLength + feedContentLength) * 0.1008);
-//     el.style = `height:${gridHeight}%`;
-//     // const lastFeedTweet = feedsTweets.children[feedsTweets.children.length - 1];
-//     // lastFeedTweet.style = `border-radius: 0px 0px 16px 16px;`;
-// });
