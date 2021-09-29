@@ -141,15 +141,31 @@
             </div>
         {{/each}}
         <div class="feed-container">
-            <div class="card card-background">
+            <div class="card create-feed-container">
                 <div class="card-content">
-                    <button class="new-feed-button" title="Click to add a new feed source">+</button>
+                    <div class="content new-feed-div">
+                        <button class="new-feed-button" title="Click to add a new feed source"><span class="button-plus">Create New Feed +</span></button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
+<div class="modal create-feed-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">New Feed</p>
+            <button class="delete close-modal" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            test
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-success submit-new-feed">Submit</button>
+        </footer>
+    </div>
+</div>
 <div class="logged-in-user-id is-invisible">{{loggedInUserData.id}}</div>
 <div class="current-profile-id is-invisible">{{UserAndFeedData.id}}</div>
 <script src="../js/profile.js"></script>

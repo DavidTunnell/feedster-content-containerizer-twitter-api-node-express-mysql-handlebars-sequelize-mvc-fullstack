@@ -201,10 +201,38 @@ a.navbar-item:hover {
 .profile-hero {
     margin-bottom: 1em;
     border-radius: 6px;
-    background-color: blue;
+}
+.hero-body {
+    background-color: #3f91ca;
+    border-radius: 6px;
 }
 .main-body {
     padding: 2em;
+}
+.tile.box {
+    background-color: #f1efeb;
+}
+.new-feed-div {
+    width: 25em;
+    height: 9em;
+    background-color: #181a1b;
+}
+.card {
+    background-color: #181a1b;
+}
+.create-feed-container {
+    margin-left: 3.5em;
+    text-align: center;
+}
+.new-feed-button {
+    margin-top: 0.9em;
+    width: 90%;
+    height: 80%;
+    border-radius: 6px;
+    /* border: 0; */
+    color: white;
+    background-color: #5e6366;
+    font-size: 1em;
 }
 @media only screen and (max-width: 1025px) {
     .navbar-item img {
