@@ -128,7 +128,9 @@ function toggleAddButton() {
         document.querySelector(".logged-in-user-id").innerHTML;
     const profileId = document.querySelector(".current-profile-id").innerHTML;
     if (loggedInUserId !== profileId) {
-        document.querySelector(".new-feed-button").classList.add("d-none");
+        document
+            .querySelector(".new-feed-button")
+            .classList.add("is-invisible");
     }
 }
 
