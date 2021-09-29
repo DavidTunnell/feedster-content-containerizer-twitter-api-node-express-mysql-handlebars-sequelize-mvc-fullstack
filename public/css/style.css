@@ -198,6 +198,14 @@ a.navbar-item:hover {
     flex-direction: column;
 }
 
+.profile-hero {
+    margin-bottom: 1em;
+    border-radius: 6px;
+    background-color: blue;
+}
+.main-body {
+    padding: 2em;
+}
 @media only screen and (max-width: 1025px) {
     .navbar-item img {
         max-height: 3em;
