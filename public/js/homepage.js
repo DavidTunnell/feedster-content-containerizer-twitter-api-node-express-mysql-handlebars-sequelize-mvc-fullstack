@@ -43,12 +43,12 @@ followFeedButtons.forEach((el) =>
 const tweetTexts = document.querySelectorAll(".timeline-Tweet-text");
 tweetTexts.forEach((el) => {
     el.innerHTML = decodeHTMLEntities(el.innerHTML);
-    if (el.innerHTML.length < 150) {
+    if (el.innerHTML.length < 140) {
         el.classList.add("tw-short-text");
     }
 });
 
-//tw-block-parent
+//Get the last tweets in each container and style them
 const feedContainers = document.querySelectorAll(".card-content");
 feedContainers.forEach((el) => {
     var lastTweet = Array.from(el.querySelectorAll(".tw-block-parent")).pop();

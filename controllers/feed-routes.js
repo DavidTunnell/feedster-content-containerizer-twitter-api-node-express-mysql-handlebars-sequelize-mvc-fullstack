@@ -47,12 +47,13 @@ router.get("/:id", async (req, res) => {
     });
     //clean data for consumption
     const comments = commentData.map((post) => post.get({ plain: true }));
+
     //pass to handlebars
     res.render("feed", {
         loggedIn: req.session.loggedIn,
         loggedInUserData: req.session.loggedInUserData,
         currentFeed: feed,
-        feedComments: comments,
+        feedComments: comments.reverse(),
     });
 });
 

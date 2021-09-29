@@ -18,7 +18,17 @@ a:hover {
 .message.is-info .message-body {
     color: #e1dfdb;
 }
+.comment-input {
+    background-color: #e1dfdb;
+}
 
+.comment-cards {
+    background-color: #181a1b;
+}
+.message-body {
+    color: #c5c1ba;
+    border-color: #5e6366;
+}
 .panel-background {
     background-color: #2d3032;
 }
@@ -64,10 +74,24 @@ a:hover {
 .timeline-Tweet-action {
     margin-bottom: 0.5em;
 }
+.single-feed {
+    width: 60%;
+}
+.single-feed-section {
+    padding: 1em;
+}
+.center-card {
+    justify-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 .card-background {
     background-color: #181a1b;
 }
-
+.card-content {
+    padding: 3px;
+}
 .navbar {
     background-color: #181a1b;
 }
@@ -165,8 +189,23 @@ a.navbar-item:hover {
     padding-bottom: 1.7em;
 }
 
+.feed-tweet-author {
+    margin-left: 0px;
+}
+.center-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 @media only screen and (max-width: 1025px) {
     .navbar-item img {
         max-height: 3em;
+    }
+    .single-feed {
+        width: 90%;
+    }
+    .comment-entry {
+        width: 80%;
     }
 }
