@@ -18,6 +18,7 @@ a:hover {
 .message.is-info .message-body {
     color: #e1dfdb;
 }
+
 .comment-input {
     background-color: #e1dfdb;
 }
@@ -27,11 +28,12 @@ a:hover {
 }
 .message-body {
     color: #c5c1ba;
-    border-color: #5e6366;
+    border-color: #3298dc;
 }
 .panel-background {
     background-color: #2d3032;
 }
+
 .input {
     background-color: #e1dfdb;
 }
@@ -156,14 +158,12 @@ a.navbar-item:hover {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    margin-top: 1em;
 }
 
 .grid-container {
     columns: 3 300px;
     column-gap: 1.5rem;
     width: 99%;
-    margin: 1em;
 }
 
 .feed-container {
@@ -202,12 +202,12 @@ a.navbar-item:hover {
     margin-bottom: 1em;
     border-radius: 6px;
 }
-.hero-body {
+.hero-body-profile {
     background-color: #3f91ca;
     border-radius: 6px;
 }
 .main-body {
-    padding: 2em;
+    padding: 1.5em;
 }
 .tile.box {
     background-color: #f1efeb;
@@ -229,7 +229,6 @@ a.navbar-item:hover {
     width: 90%;
     height: 80%;
     border-radius: 6px;
-    /* border: 0; */
     color: white;
     background-color: #5e6366;
     font-size: 1em;
@@ -243,5 +242,8 @@ a.navbar-item:hover {
     }
     .comment-entry {
         width: 80%;
+    }
+    #navbarMenu {
+        background-color: #2d3032;
     }
 }
