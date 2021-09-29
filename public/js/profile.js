@@ -95,13 +95,16 @@ const submitNewFeed = async (event) => {
 };
 
 //add a new source to feed modal
-// const addFeedSource = async (event) => {
-//     event.preventDefault();
-//     const feedEntryContainer = document.querySelector(".feed-entries");
-//     const html =
-//         "<label for='feedTitle'>Enter a Feed Source:</label><input type='text' class='form-control feed-sources' placeholder='@twitter'>";
-//     feedEntryContainer.innerHTML += html;
-// };
+const addFeedSource = async (event) => {
+    event.preventDefault();
+    const feedEntryContainer = document.querySelector(".feed-sources");
+    if (feedEntryContainer.childElementCount <= 5) {
+        const html = `<div class="control feed-inputs"><input class="input" type="text" placeholder="@twitter" required></div>`;
+        feedEntryContainer.innerHTML += html;
+    } else {
+        alert("You have reached the max amount of feeds that can be added.");
+    }
+};
 
 //hide add button if it's not current logged in users own profile
 function toggleAddButton() {
@@ -124,9 +127,9 @@ followFeedButtons.forEach((el) =>
     el.addEventListener("click", (event) => followFeedHandler(event))
 );
 
-// document
-//     .querySelector(".add-feed-button")
-//     .addEventListener("click", addFeedSource);
+document
+    .querySelector(".add-feed-button")
+    .addEventListener("click", addFeedSource);
 
 // document.querySelector(".submit-feed").addEventListener("click", submitNewFeed);
 

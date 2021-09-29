@@ -33,7 +33,19 @@ a:hover {
 .panel-background {
     background-color: #2d3032;
 }
-
+.modal-card-head {
+    background-color: #2d3032;
+    color: #e1dfdb;
+}
+.modal-card-foot {
+    background-color: #2d3032;
+}
+.modal-card-body {
+    background-color: #181a1b;
+}
+.modal-card-title {
+    color: #e1dfdb;
+}
 .input {
     background-color: #e1dfdb;
 }
@@ -50,7 +62,7 @@ a:hover {
     margin-left: -1em;
     color: #181a1b;
 }
-/* 1e2021 */
+
 .timeline-TweetList-tweet {
     background-color: #1e2021;
 }
@@ -232,6 +244,9 @@ a.navbar-item:hover {
     color: white;
     background-color: #5e6366;
     font-size: 1em;
+}
+.feed-inputs {
+    padding: 1.25em 0 0 0;
 }
 @media only screen and (max-width: 1025px) {
     .navbar-item img {
