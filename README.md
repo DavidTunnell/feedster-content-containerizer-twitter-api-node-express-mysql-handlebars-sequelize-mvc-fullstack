@@ -2,7 +2,7 @@
 
 Feedster is an MVC Fullstack Twitter content containerizer. You can create an account and create custom feeds of your favorite twitter users. These feeds can be shared (links) followed and experienced as a group using the comment section. This creates a new way to experience any interest, from a live sporting event to your favorite personalities for any subject. It is also mobile friendly.
 
-[Live Demo Here](http://feedster-twitter.herokuapp.com/.
+[Live Demo Here](http://feedster-twitter.herokuapp.com/).
 
 Example seeded user account credentials are:
 
