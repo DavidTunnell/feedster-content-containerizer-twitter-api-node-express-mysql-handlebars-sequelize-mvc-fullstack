@@ -2,7 +2,7 @@
 
 Feedster is an MVC Fullstack Twitter content containerizer. You can create an account and create custom feeds of your favorite twitter users. These feeds can be shared (links) followed and experienced as a group using the comment section. This creates a new way to experience any interest, from a live sporting event to your favorite personalities for any subject. It is also mobile friendly.
 
-[Live Demo Here](https://www.fake.com/).
+[Live Demo Here](http://feedster-twitter.herokuapp.com/.
 
 Example seeded user account credentials are:
 
@@ -13,26 +13,22 @@ This project was a [group project](https://github.com/jnordan132/Feedster) that 
 
 Features:
 
-//TODO
-
--   A homepage that showcases existing blog posts.
+-   The ability to create custom twitter feeds based on any subject desired for users to enjoy.
+-   A homepage that showcases existing feed containers created by other users.
 -   A navigation bar serving express routes.
--   A dashboard to create, read, update and delete blog posts for the admin.
+-   A profile where users can create their own custom feed containers and see how many feeds they created, how many follow their feeds and how many feeds they follow.
+-   The ability for users to follow other feeds they like and see them on their profile feed.
 -   Individual pages for users to create accounts, login and logout using the site using authentication.
--   The ability for users comment on blog posts and for admins to delete them.
--   An auto timeout logout where after a certain amount of time the user will need to login again for certain actions (add, update, delete, comments).
+-   The ability for users comment on feeds.
+-   An auto timeout logout where after a certain amount of time the user will need to login again for certain actions.
 -   Sessions and Cookie based authorization/security for parts of the application
--   Client-side API consumption and AJAX DOM manipulation.
+-   Client-side API consumption
 -   An API that serves JSON via Database.
 -   A Templated view engine for reusable code.
 -   A Modern responsive interface design.
 -   An Automated database schema generation and seed data (and a SQL script to generate the database itself).
--   A Highly Modular MVC Design for Extensibility.
--   Optional API URL Generator for external API consumption.
+-   A Modular MVC Design for Extensibility.
 -   Authentication Middleware for Routing Stack.
--   Modular Layout with a Main and Partial Template Usage
-
-//TODO
 
 This project uses the following technologies/libraries.
 
