@@ -1,8 +1,6 @@
 // Dependencies
 const express = require("express");
 const favicon = require("serve-favicon");
-// https://www.npmjs.com/package/http-errors
-const createError = require("http-errors");
 const expressHandlebars = require("express-handlebars");
 const session = require("express-session");
 const path = require("path");
@@ -10,7 +8,6 @@ const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const sequelize = require("./config/connection");
 const controllers = require("./controllers");
 const helpers = require("./utils/helpers");
-const { errorMonitor } = require("events");
 require("dotenv").config();
 
 // Incorporate the custom helper methods: ./utils/helpers.js

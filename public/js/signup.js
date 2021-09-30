@@ -1,3 +1,4 @@
+//sign the user up with data provided by them in inputs
 const signupFormHandler = async (event) => {
     event.preventDefault();
 
@@ -36,6 +37,8 @@ const signupFormHandler = async (event) => {
         alert("Please fill out all fields.");
     }
 };
+
+//add a click event to the signup form button
 document
     .querySelector(".signup-button")
     .addEventListener("click", signupFormHandler);

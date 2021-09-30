@@ -126,10 +126,12 @@ followFeedButtons.forEach((el) =>
     el.addEventListener("click", (event) => followFeedHandler(event))
 );
 
+//add click event to add feed button
 document
     .querySelector(".add-feed-button")
     .addEventListener("click", addFeedSource);
 
+//add click event to submit new feed button
 document
     .querySelector(".submit-new-feed")
     .addEventListener("click", submitNewFeed);

@@ -6,8 +6,9 @@ const logout = async () => {
     });
 
     if (!response.ok) {
-        alert("Failed to log out.");
+        alert("Failed to log out. Are you currently logged in?");
     }
 };
 
+//automatically logout when the user hits the page
 logout();

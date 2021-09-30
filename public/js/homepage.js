@@ -1,3 +1,4 @@
+//event action function for following a feed button
 const followFeedHandler = async (event) => {
     event.preventDefault();
 
