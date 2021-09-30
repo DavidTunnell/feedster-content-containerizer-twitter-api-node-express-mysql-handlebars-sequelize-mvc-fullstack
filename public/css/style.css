@@ -261,4 +261,40 @@ a.navbar-item:hover {
     #navbarMenu {
         background-color: #2d3032;
     }
+    .feed-container {
+        margin: 0;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .card-content {
+        width: 100%;
+    }
+    .timeline-TweetList-tweet {
+        width: 100%;
+    }
+    .timeline-Tweet {
+        width: 100%;
+        margin-top: 5px;
+    }
+    .timeline-Tweet-text {
+        width: 85%;
+    }
+    .timeline-Tweet-brand {
+        visibility: hidden;
+    }
+    .card-header-title {
+        font-size: 0.75em;
+    }
+    .username-label {
+        font-size: 2em !important;
+    }
+    .info-tiles {
+        margin-bottom: 1.5em;
+    }
+    .create-feed-container {
+        margin-left: 0;
+    }
+    .new-feed-div {
+        width: 20em;
+    }
 }

@@ -26,9 +26,6 @@ router.get("/:id", async (req, res) => {
                 },
             ],
         });
-        // if(!userData) {
-        //     throw new AppError("Record not found!", 404);
-        // }
 
         const userDataCleaned = userData.get({ plain: true });
         const feedFollowersCountData = await FeedFollowers.count({

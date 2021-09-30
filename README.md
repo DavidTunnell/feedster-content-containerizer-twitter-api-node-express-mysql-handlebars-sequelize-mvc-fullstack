@@ -1,13 +1,15 @@
 # Feedster - Twitter API, Node, Express, MySQL, Sequelize, Handlebars, MVC, Fullstack
 
-Feedster is an MVC Fullstack Twitter content containerizer. You can create an account and create custom feeds of your favorite twitter users. These feeds can be shared (links) followed and experienced as a group using the comment section. This creates a new way to experience any interest, from a live sporting event to your favorite personalities for any subject.
+Feedster is an MVC Fullstack Twitter content containerizer. You can create an account and create custom feeds of your favorite twitter users. These feeds can be shared (links) followed and experienced as a group using the comment section. This creates a new way to experience any interest, from a live sporting event to your favorite personalities for any subject. It is also mobile friendly.
 
 [Live Demo Here](https://www.fake.com/).
 
-Seeded User account credentials are:
+Example seeded user account credentials are:
 
 -   username: test@gmail.com
 -   password: 123456
+
+This project was a [group project](https://github.com/jnordan132/Feedster) that I have made additional updates to.
 
 Features:
 
@@ -29,53 +31,72 @@ This project uses the following technologies/libraries.
 
 ## Project Structure
 
+In the config folder is the Sequelize connection used throughout the server side and uses dotenv for connection properties. Additionally, config contains the Twitter object with credentials attached to be used throughout the application. The controllers folder holds the routing logic for the API and web app calls. The db folder just contains a script to generate the empty database that is used in this project. The models folder contains each of the models used in the MVC model and is connected to the database via Sequelize. The public folder contains css, images and JavaScript used by the client side application served to the end user's browser. This includes API calls to the RESTful API Node.js Server. It also contains screenshots for this README and the frontend's favicon. The seeds folder contains the JavaScript and JSON to create the database tables and seed them with test data. The utils folder has several server side helpers such as the authentication middleware and a DateTime formatter for rendering in the Handlebars.js views. It also has twitter API related calls used throughout the app. The views folder contains the Handlebars.js main layout template and child templates. The .env file contains the variables used as credentials for the MySQL database and the Twitter connection. Finally, ./server.js is the main file to run the server.
+
 ## Installation
+
+After cloning the repo to your system, run `npm i` at the project root to get the node project dependencies and then update the file `.env.EXAMPLE` to `.env` and update it with your database credentials and [Twitter API credentials](https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api). You can also add a custom session secret key if you would like. If you want to change the database name `feedster_db` it also needs to be changed in the `./db/schema.sql` for database generation.
+
+Then run the script to generate the `feedster_db` database using the `./db/schema.sql` on your MySQL database instance. Then use command `npm run seed` (notice the various commands available in `package.json`) to generate the tables and example data. Once this is complete use command `npm run dev` if you would like the server to use Nodemon and auto-restart when there are updates to code or `npm run start` for a normal server start.
+
+The application will be available by default at http://localhost:3001/ if you are using a local development environment. The RESTful API will also be available to be called independently from the web app at http://localhost:3001/api/users/, http://localhost:3001/api/feeds/, http://localhost:3001/api/feedfollowers/ and http://localhost:3001/api/comments/.
 
 ## Example API Call
 
+POST - http://localhost:3001/api/feeds/
+
+```
+{
+   "title":"Node.js Programming",
+   "user_id":"1",
+   "sources":[
+      {
+         "source":"@nodejs"
+      },
+      {
+         "source":"@trott"
+      },
+      {
+         "source":"@adamzdanielle"
+      }
+   ]
+}
+```
+
 ## Database schema
 
-## Screenshots
+![database schema](./public/assets/readme-screenshots/database-schema.png)
 
-==============================
+# Screenshots
 
-## Project Resources:
+## Homepage
 
-<!-- 👉[Watch - Project App Demo]()<br/> -->
+![homepage](./public/assets/readme-screenshots/homepage.png)
 
-👉[Project Live URL (Heroku)](https://feedster-twitter-feed.herokuapp.com/)<br/>
-👉[Project Wireframe/Plan/Proposal](https://docs.google.com/presentation/d/12Ssp54Pa-8JnnrAwpo0s94ohWYoS_NhuVFpAaEvPIOY/edit?usp=sharing)<br/>
-👉[Project Presentation Deck](https://docs.google.com/presentation/d/1mRIDBl0DP-tDFZV7GiqyeLykqNoXN9z3CVnP8862yow/edit?usp=sharing)<br/>
-👉[Database Schema](./public/assets/database-schema.png)
-<br><img src= "./public/assets/database-schema.png"> <br/>
+## Profile
 
-## Technology Used in this Project
+![homepage](./public/assets/readme-screenshots/profile.png)
 
-**Accessibility Testing:** <a href="https://github.com/GoogleChrome/lighthouse" target="_blank"> <img align="center" width="40" src="./public/assets/lighthouse-logo.svg"> </a> <br>
-**IDE/OS:** <img align="center" src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white"> <img align="center" src="https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white"> <img align="center" src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white"> <br>
-**Cloud Hosting:** <img align="center" src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"> <img align="center" src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white"> <br>
-**Frontend:** <img align="center" src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"> <img align="center" src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"> <img align="center" src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <br>
-**Backend:** <img align="center" src="https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white"> <img align="center" src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"><br>
-**Database:** <img align="center" src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white"> <br>
-**Frameworks:** <img align="center" src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white"> <img align="center" src="https://img.shields.io/badge/Handlebars-JS-f0772b?style=for-the-badge&logo=Handlebars-JS&logoColor=fff"> <img align="center" src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"> <img align="center" src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"> <img align="center" src="https://img.shields.io/badge/-Sequelize-090909?style=for-the-badge&logo=Sequelize"> <img align="center" src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"> <img align="center" src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white"> <br>
-**Linters:** <img align="center" src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white"> <br>
-**Social Media:** <img align="center" src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"> <br>
-**Communication:** <img align="center" src="https://img.shields.io/badge/Slack-4A154B?logo=slack&logoColor=white" /> <img align="center" src="https://img.shields.io/badge/Google%20Meet-32A350?style=for-the-badge&logo=google-meet&logoColor=white"> <img align="center" src="https://img.shields.io/badge/Zoom-2D8CFF?style=for-the-badge&logo=zoom&logoColor=white">
+## Create Feed Modal
 
-## App Usage/ Installation Instructions:
+![create feed](./public/assets/readme-screenshots/create-feed.png)
 
-To use **Feedster** web interface:
+## Individual Feed
 
-a. Clone this repository to your local system <br>
-b. Run `npm install` or `npm i` in order to install the npm package dependencies as specified in the `package.json` file <br> <img src= "./public/assets/packageJSON.png"> <br>
-c. Update the `.env.EXAMPLE` file by editing your mysql username and password for the db; including twitter specifics as defined in *https://www.npmjs.com/package/twitter* <br>
-d. Update the file name from `.env.EXAMPLE` to `.env` and ensure this file is in the root folder itself <br>
-e. Connect to the mysql DB locally and source the `schema.sql;` file by running `source db/schema.sql;` command <br>
-_Example:_<br> <img src= "./public/assets/MySqlCommands.png"> <br>
-f. `exit` from the mysql connection to and `seed` the db by running `npm run seed` <br>
-_Example:_<br> <img src= "./public/assets/npmRunSeed.png"> <br>
-g. Optionally, you can run `node run test` for _Jest_ - a javascript testing framework to kick off a series of quick tests (Dummy Tests) <br>
-_Example:_ <br><img src= "./public/assets/npmRunTest.png"> <br>
-h.Finally, to run this application enter `node server.js` or `npm start` to be prompted with the `localhost/port#` url <br>
-i.On the **Feedster** [landing page](https://feedster-twitter-feed.herokuapp.com/) you will be presented with User Feeds you can opt to follow after Signing/Logging in
-<img src= "./public/assets/LandingPage.png"> <br>
+![feed](./public/assets/readme-screenshots/feed.png)
+
+## Login
+
+![login](./public/assets/readme-screenshots/login.png)
+
+## Signup
+
+![signup](./public/assets/readme-screenshots/signup.png)
+
+## Logout
+
+![logout](./public/assets/readme-screenshots/logout.png)
+
+## Mobile Friendly
+
+[Screenshot Here](./public/assets/readme-screenshots/mobile-friendly.png).
