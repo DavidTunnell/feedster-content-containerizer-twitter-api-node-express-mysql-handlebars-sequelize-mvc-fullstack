@@ -13,6 +13,27 @@ This project was a [group project](https://github.com/jnordan132/Feedster) that 
 
 Features:
 
+//TODO
+
+-   A homepage that showcases existing blog posts.
+-   A navigation bar serving express routes.
+-   A dashboard to create, read, update and delete blog posts for the admin.
+-   Individual pages for users to create accounts, login and logout using the site using authentication.
+-   The ability for users comment on blog posts and for admins to delete them.
+-   An auto timeout logout where after a certain amount of time the user will need to login again for certain actions (add, update, delete, comments).
+-   Sessions and Cookie based authorization/security for parts of the application
+-   Client-side API consumption and AJAX DOM manipulation.
+-   An API that serves JSON via Database.
+-   A Templated view engine for reusable code.
+-   A Modern responsive interface design.
+-   An Automated database schema generation and seed data (and a SQL script to generate the database itself).
+-   A Highly Modular MVC Design for Extensibility.
+-   Optional API URL Generator for external API consumption.
+-   Authentication Middleware for Routing Stack.
+-   Modular Layout with a Main and Partial Template Usage
+
+//TODO
+
 This project uses the following technologies/libraries.
 
 -   [Twitter for Node.js](https://www.npmjs.com/package/twitter) for server side [Twitter API](https://developer.twitter.com/en/docs/twitter-api) interactions
@@ -31,7 +52,7 @@ This project uses the following technologies/libraries.
 
 ## Project Structure
 
-In the config folder is the Sequelize connection used throughout the server side and uses dotenv for connection properties. Additionally, config contains the Twitter object with credentials attached to be used throughout the application. The controllers folder holds the routing logic for the API and web app calls. The db folder just contains a script to generate the empty database that is used in this project. The models folder contains each of the models used in the MVC model and is connected to the database via Sequelize. The public folder contains css, images and JavaScript used by the client side application served to the end user's browser. This includes API calls to the RESTful API Node.js Server. It also contains screenshots for this README and the frontend's favicon. The seeds folder contains the JavaScript and JSON to create the database tables and seed them with test data. The utils folder has several server side helpers such as the authentication middleware and a DateTime formatter for rendering in the Handlebars.js views. It also has twitter API related calls used throughout the app. The views folder contains the Handlebars.js main layout template and child templates. The .env file contains the variables used as credentials for the MySQL database and the Twitter connection. Finally, ./server.js is the main file to run the server.
+In the config folder is the Sequelize connection used throughout the server side and uses dotenv for connection properties. Additionally, config contains the Twitter object with credentials attached to be used throughout the application. The controllers folder holds the routing logic for the API and web app calls. The db folder just contains a script to generate the empty database that is used in this project. The models folder contains each of the models used in the MVC model and is connected to the database via Sequelize. The public folder contains css, images and JavaScript used by the client side application served to the end user's browser. This includes API calls to the RESTful API Node.js Server. It also contains screenshots for this README and the frontend's favicon. The seeds folder contains the JavaScript and JSON to create the database tables and seed them with test data. The utils folder has several server side helpers such as the authentication middleware and a DateTime formatter for rendering in the Handlebars.js views. It also has twitter API related calls used throughout the app. The views folder contains the Handlebars.js main layout template and child templates. The `.env` file contains the variables used as credentials for the MySQL database and the Twitter connection. Finally, `./server.js` is the main file to run the server.
 
 ## Installation
 
