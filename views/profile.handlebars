@@ -99,9 +99,9 @@
                             <button
                                 class="card-header-icon follow-feed-button"
                                 aria-label="more options"
-                                data-feed-id="{{this.feed.id}}"
+                                data-feed-id="{{this.id}}"
                                 data-logged-in-user-id="{{../loggedInUserData.id}}"
-                                data-user-created-id="{{this.feed.user_id}}" title="Click to follow this feed source"
+                                data-user-created-id="{{this.user_id}}" title="Click to follow this feed source"
                             >
                                 <span class="icon">
                                     <i
@@ -162,7 +162,7 @@
             <div class="field">
                 <label class="label">Feed Title</label>
                 <div class="control">
-                    <input class="input" type="text" placeholder="Fun Programming Challenges" required>
+                    <input class="input feed-title" type="text" placeholder="Fun Programming Challenges" required>
                 </div>
                 <p class="help">Enter an interesting title for your custom feed.</p>
             </div>
@@ -171,12 +171,12 @@
             </div>
             <div class="feed-sources">
                 <div class="control feed-inputs">
-                    <input class="input" type="text" placeholder="@twitter" required>
+                    <input class="input feed-user-input" type="text" placeholder="@twitter" required>
                 </div>
             </div>
         </section>
         <footer class="modal-card-foot">
-            <button class="button is-success submit-new-feed">Submit</button>
+            <button class="button is-success submit-new-feed ">Submit</button>
         </footer>
     </div>
 </div>

@@ -1,13 +1,12 @@
 //follow a feed logged in
 const followFeedHandler = async (event) => {
     event.preventDefault();
-
-    const feed_id = event.target.getAttribute("data-feed-id");
-    const user_following_id = event.target.getAttribute(
-        "data-logged-in-user-id"
+    const feed_id = event.currentTarget.getAttribute("data-feed-id");
+    const user_following_id =
+        document.querySelector(".logged-in-user-id").innerHTML;
+    const user_created_id = event.currentTarget.getAttribute(
+        "data-user-created-id"
     );
-    const user_created_id = event.target.getAttribute("data-user-created-id");
-
     if (feed_id && user_following_id && user_created_id) {
         const response = await fetch("/api/feedfollowers/", {
             method: "POST",
@@ -53,9 +52,10 @@ const followFeedHandler = async (event) => {
 */
 const submitNewFeed = async (event) => {
     event.preventDefault();
-    const feedTitle = document.querySelector("#feedTitle").value;
-    const elements = document.querySelectorAll(".feed-sources");
-    const loggedInUserId = event.target.getAttribute("data-logged-in-user-id");
+    const feedTitle = document.querySelector(".feed-title").value;
+    const elements = document.querySelectorAll(".feed-user-input");
+    const loggedInUserId =
+        document.querySelector(".logged-in-user-id").innerHTML;
     const sourceArray = [];
     elements.forEach((element) => {
         sourceArray.push(element.value);
@@ -72,7 +72,6 @@ const submitNewFeed = async (event) => {
     sourcesJson = sourcesJson.substring(0, sourcesJson.length - 1);
     let endOfJson = "]}";
     const combinedJson = json + sourcesJson + endOfJson;
-    console.log(combinedJson);
     if (loggedInUserId && feedTitle && sourceArray) {
         const response = await fetch("/api/feeds/", {
             method: "POST",
@@ -99,7 +98,7 @@ const addFeedSource = async (event) => {
     event.preventDefault();
     const feedEntryContainer = document.querySelector(".feed-sources");
     if (feedEntryContainer.childElementCount <= 5) {
-        const html = `<div class="control feed-inputs"><input class="input" type="text" placeholder="@twitter" required></div>`;
+        const html = `<div class="control feed-inputs"><input class="input feed-user-input" type="text" placeholder="@twitter" required></div>`;
         feedEntryContainer.innerHTML += html;
     } else {
         alert("You have reached the max amount of feeds that can be added.");
@@ -113,7 +112,7 @@ function toggleAddButton() {
     const profileId = document.querySelector(".current-profile-id").innerHTML;
     if (loggedInUserId !== profileId) {
         document
-            .querySelector(".new-feed-button") //needs to be the container/card
+            .querySelector(".create-feed-container") //needs to be the container/card
             .classList.add("is-invisible");
     }
 }
@@ -131,13 +130,15 @@ document
     .querySelector(".add-feed-button")
     .addEventListener("click", addFeedSource);
 
-// document.querySelector(".submit-feed").addEventListener("click", submitNewFeed);
+document
+    .querySelector(".submit-new-feed")
+    .addEventListener("click", submitNewFeed);
 
 //decode tweet contents and add links to urls and hashtags
 const tweetTexts = document.querySelectorAll(".timeline-Tweet-text");
 tweetTexts.forEach((el) => {
     el.innerHTML = decodeHTMLEntities(el.innerHTML);
-    if (el.innerHTML.length < 140) {
+    if (el.innerHTML.length < 130) {
         el.classList.add("tw-short-text");
     }
 });
