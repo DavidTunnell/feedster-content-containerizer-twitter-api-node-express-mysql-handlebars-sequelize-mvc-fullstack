@@ -40,7 +40,8 @@ a.navbar-item.is-active {
 .modal-card-body,
 .navbar,
 .card-background,
-.create-feed-container {
+.create-feed-container,
+.tw-background {
     background-color: var(--darker-offset-color);
 }
 .message-body {
@@ -48,8 +49,7 @@ a.navbar-item.is-active {
     border-color: #3298dc;
 }
 .panel-background,
-.modal-card-foot,
-.tw-background {
+.modal-card-foot {
     background-color: var(--main-feel-color);
 }
 .modal-card-head {
